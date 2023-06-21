@@ -6,10 +6,8 @@
  */
 var reduce = function(nums, fn, init) {
     let sum = init;
-    let len = nums.length;
-    while(len !== 0) {
-        sum = fn(sum, nums[nums.length - len]);
-        len--;
+    for (let i=0; i<nums.length; i++) {
+        sum = fn(sum, nums[i]);
     }
     return sum;
 };
